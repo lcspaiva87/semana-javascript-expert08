@@ -23,7 +23,7 @@ const encoderConfig = {
     pt: 4,
     hardwareAcceleration: 'prefer-software',
 
-    // MP4
+    // mp4
     // codec: 'avc1.42002A',
     // pt: 1,
     // hardwareAcceleration: 'prefer-hardware',
@@ -42,6 +42,9 @@ onmessage = async ({ data }) => {
         file: data.file,
         renderFrame,
         encoderConfig,
+        sendMessage(message) {
+            self.postMessage(message)
+        }
     })
 
     self.postMessage({

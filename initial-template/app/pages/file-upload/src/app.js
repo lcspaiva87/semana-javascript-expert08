@@ -29,6 +29,7 @@ const clock = new Clock()
 
 function onChange(e) {
     const file = e.target.files[0]
+    console.log(file)
     const { name, size } = file
     txtfileName.innerText = name
     fileSize.innerText = parseBytesIntoMBAndGB(size)

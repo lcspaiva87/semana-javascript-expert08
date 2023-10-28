@@ -33,11 +33,7 @@ export default class VideoProcessor {
                             decoder.decode(chunk)
                         },
                     }
-                ).then(() => {
-                    setTimeout(() => {
-                        controller.close()
-                    }, 1000);
-                })
+                )
             },
 
         })
